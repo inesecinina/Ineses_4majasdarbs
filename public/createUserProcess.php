@@ -4,7 +4,6 @@ require_once '../src/db.php';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     $username = $_POST['username'];
-    $e_mail = $_POST['e_mail'];
     if (strlen($_POST['password']) < 6) {
         echo "Password too short";
         die("Too short!");

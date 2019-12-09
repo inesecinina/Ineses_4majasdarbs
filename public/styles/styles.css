@@ -1,0 +1,10 @@
+.logins{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 300px;
+}
+.input_field {
+    width: 300px;
+    margin: 15px;
+}
