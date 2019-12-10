@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         die("Too short!");
     }
     if ($_POST['password'] != $_POST['password2']) {
-        echo "Password mismatch";
+        echo "Paroles nesakrīt";
 
     }
     // you could check if password matches certain format
