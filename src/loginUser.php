@@ -2,7 +2,7 @@
 //we need to start sesssion to check if user already exists
 session_start();
 if (isset($_SESSION['username'])) {
-    echo "Sveiks! Laipni lūgts darbu vācelītē" . $_SESSION['username'];
+    echo "Sveiks! Laipni lūgts darbu vācelītē, " . $_SESSION['username'];
 } else {
     echo "<div class='register-p'>";
     echo "<form class='logins' action='loginProcess.php' method='post'>";
