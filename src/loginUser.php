@@ -3,6 +3,9 @@
 session_start();
 if (isset($_SESSION['username'])) {
     echo "Sveiks! Laipni lūgts darbu vācelītē, " . $_SESSION['username'];
+    echo "<form action='logoutProcess.php' method='post'>";
+    echo "<button>Logout</button>";
+    echo "</form>";
 } else {
     echo "<div class='register-p'>";
     echo "<form class='logins' action='loginProcess.php' method='post'>";
