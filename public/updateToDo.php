@@ -16,9 +16,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         WHERE `to_do_list`.`id` = (:todoid)");
 
     $stmt->bindParam(':todoid', $todo_id);
-    $stmt->bindParam(':artist', $artist);
-    $stmt->bindParam(':length', $length);
-    $stmt->bindParam(':favorite', $isFavorite);
+    $stmt->bindParam(':event', $event);
+    $stmt->bindParam(':description', $description);
+    $stmt->bindParam(':doing_date', $doing_date);
+    
 
     $stmt->execute();
     //we go to our index.php or rather our root

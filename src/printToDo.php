@@ -25,13 +25,14 @@ foreach ($allRows as $row) {
 
     foreach ($row as $key => $value) {
 
-        //TODO we need to process title, artist and length seperately as special cases
         switch ($key) {
-            case 'Event':
-            case 'Description':
-            case 'Doing_date':
-                echo "<input class='input-value-cell value-$key' name='$key' value='$value'></input>";
-                break;
+            case 'event':
+            case 'description':
+               echo "<input class='input-value-cell value-$key' name='$key' value='$value'></input>";
+                break; 
+            case 'doing_date':
+                echo "<input class='input-value-cell value-$key' type='date' name='$key' value='$value'></input>";
+            break; 
             default:
                 echo "<span class='value-cell'>$value </span>";
                 break;
