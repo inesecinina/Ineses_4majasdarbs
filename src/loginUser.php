@@ -7,13 +7,20 @@ if (isset($_SESSION['username'])) {
     echo "<button>Logout</button>";
     echo "</form>";
 } else {
-    echo "<div class='register-p'>";
-    echo "<form class='logins' action='loginProcess.php' method='post'>";
+    echo "<form class='modal-content' action='loginProcess.php' method='post'>";
+    // echo "<div class='container'>";
+    echo "<h2>Darbu vācelīte</h2>";
+    echo "<div>";
+    echo "<label for='username'><b>Lietotājvārds</b></label>";
     echo "<input class= 'input_field' name='username'placeholder='Ievadi lietotājvārdu' required>";
+    echo "</div>";
+    echo "<div>";
+    echo "<label for='password'><b>Parole</b></label>"; 
     echo "<input class= 'input_field' name='password' type='password' placeholder='Ievadi paroli' required>";
+    echo "</div>";
     echo "<button>Ienākt</button>";
     echo "Neesi reģistrējies? Izdari to šeit! <a href='createUser.php'>Izveidot lietotāju</a> <br>";
+    // echo "</div>";
     echo "</form>";
-    echo "</div>";
 }
-echo "<hr>";
+

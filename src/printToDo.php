@@ -2,10 +2,10 @@
 require_once 'db.php';
 
 if (!isset($_SESSION['username'])) {
-    echo "Please Login to see your songs";
+    // echo "Lūdzu, ieej savā profilā, lai redzētu savu darba virsmu!";
     return;
 } else {
-    echo "Hello there " . $_SESSION['username'] . "!<br>";
+    echo "Sveiks,  " . $_SESSION['username'] . "!<br>";
 }
 $stmt = $conn->prepare("SELECT * FROM to_do_list
     WHERE (user_id = :user_id)");
@@ -34,7 +34,7 @@ foreach ($allRows as $row) {
                 echo "<input class='input-value-cell value-$key' type='date' name='$key' value='$value'></input>";
             break; 
             default:
-                echo "<span class='value-cell'>$value </span>";
+                // echo "<span class='value-cell'>$value </span>";
                 break;
         }
     }
