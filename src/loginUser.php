@@ -8,7 +8,6 @@ if (isset($_SESSION['username'])) {
     echo "</form>";
 } else {
     echo "<form class='modal-content' action='loginProcess.php' method='post'>";
-    // echo "<div class='container'>";
     echo "<h2>Darbu vācelīte</h2>";
     echo "<div>";
     echo "<label for='username'><b>Lietotājvārds</b></label>";
@@ -20,7 +19,6 @@ if (isset($_SESSION['username'])) {
     echo "</div>";
     echo "<button>Ienākt</button>";
     echo "Neesi reģistrējies? Izdari to šeit! <a href='createUser.php'>Izveidot lietotāju</a> <br>";
-    // echo "</div>";
     echo "</form>";
 }
 
