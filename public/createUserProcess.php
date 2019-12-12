@@ -9,7 +9,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         die("Too short!");
     }
     if ($_POST['password'] != $_POST['password2']) {
-        echo "Paroles nesakrīt";
+        // echo "Paroles nesakrīt";
+        echo "<div class='alert alert-warning'>";
+        echo "<strong>Uzmanību!</strong> Jūsu ievadītās paroles nesakrīt!";
+        echo "</div>";
 
     }
     // you could check if password matches certain format

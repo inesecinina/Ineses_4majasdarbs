@@ -4,9 +4,7 @@ require_once 'db.php';
 if (!isset($_SESSION['username'])) {
     // echo "Lūdzu, ieej savā profilā, lai redzētu savu darba virsmu!";
     return;
-} else {
-    echo "Sveiks,  " . $_SESSION['username'] . "!<br>";
-}
+} 
 $stmt = $conn->prepare("SELECT * FROM to_do_list
     WHERE (user_id = :user_id)");
 $stmt->bindParam(':user_id', $_SESSION['id']);
@@ -15,12 +13,11 @@ $stmt->execute();
 $isFetchModeSet = $stmt->setFetchMode(PDO::FETCH_ASSOC);
 $allRows = $stmt->fetchAll();
 
-echo "<hr>";
 echo "<div class='todoes'>";
 $columnsPrinted = false; //for column names
 foreach ($allRows as $row) {
     
-    echo "<form action='updateToDo.php' method='post'>";
+    echo "<form action='updateToDoProcess.php' method='post'>";
     echo "<div class='update-todo'>";
 
     foreach ($row as $key => $value) {

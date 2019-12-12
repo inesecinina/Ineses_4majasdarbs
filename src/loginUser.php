@@ -3,9 +3,9 @@
 session_start();
 if (isset($_SESSION['username'])) {
     echo "<div class = 'logout'>";
-    echo "Sveiks! Laipni lūgts darbu vācelītē, " . $_SESSION['username'];
+    echo "<div class='sveiciens'>Sveiks! Laipni lūgts darbu vācelītē, "  . $_SESSION['username']."</div>";
     echo "<form action='logoutProcess.php' method='post'>";
-    echo "<button style='width: 170px'>Iziet</button>";
+    echo "<button style='width: 100px'>Iziet</button>";
     echo "</form>";
     echo "</div>";
 } else {
