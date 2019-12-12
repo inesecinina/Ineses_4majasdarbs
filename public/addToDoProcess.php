@@ -1,9 +1,13 @@
 <?php
-session_start();
-if (!$_SESSION['id']) {
-    header('Location: /');
-    return; 
+ //session_start();
+// if (!$_SESSION['id']) {
+//     return; 
+// }
+if (!isset($_SESSION['username'])) {
+    // echo "Lūdzu, ieej savā profilā, lai redzētu savu darba virsmu!";
+    return;
 }
+
 require_once '../src/db.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
