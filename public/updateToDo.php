@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once '../src/templates/head.php';
 require_once '../src/db.php';
 
 
@@ -15,7 +16,6 @@ $stmt->execute();
 
 $isFetchModeSet = $stmt->setFetchMode(PDO::FETCH_ASSOC);
 $allRows = $stmt->fetchAll();
-var_dump($allRows);
 
 echo "<div class='todoes'>";
 // $columnsPrinted = false; //for column names
@@ -49,3 +49,5 @@ foreach ($allRows as $row) {
 }
 echo "</div>";
 echo "<hr>";
+
+require_once '../src/templates/footer.php';
