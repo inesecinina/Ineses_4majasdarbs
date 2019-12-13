@@ -17,6 +17,8 @@ echo "<h1> Darbu vācelīte ir aplikācija, kas palīdzēs atcerēties to, ko va
 echo "<a href = 'addToDo.php'><button> + Pievienot darbu</button></a>";
 echo "</div>";
 }
+echo "<hr>";
+echo "<div class = 'virsraksts'> Mani Darbi</div>";
 require_once '../src/printToDo.php';
 
 

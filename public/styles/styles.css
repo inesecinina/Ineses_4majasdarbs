@@ -1,11 +1,11 @@
 body {
 font-family: Arial, Helvetica, sans-serif;
 color: whitesmoke;
-background-color: #b4afa8 ;
+background-color:#CFC3B5 ;
 }
 body::before {
     background-image: url("../img/backgrounds.png");
-    background-color: #b4afa8 ;
+    background-color: #CFC3B5 ;
     background-size: cover;
     content: "";
     display: block;
@@ -22,6 +22,12 @@ body::before {
 h2{
     color: whitesmoke;
     text-align: center;
+}
+
+h1{
+  color: whitesmoke;
+  text-align: center;
+  font-size: 20px;
 }
 
 /* Full-width input fields */
@@ -114,10 +120,29 @@ button:hover {
     background-color: #b4afa8;
     margin: 3% auto 3% auto; /* 5% from the top, 15% from the bottom and centered */
     border: none;
-    width: 200px; 
+    width: 300px; 
   }
 
   .flexis {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .btn-flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-wrap: wrap;
+    align-content: flex-end;
+  }
+
+  .update_btn {
+    width: 120px;
+    margin: 5px;
+  }
+
+  .virsraksts {
+    color: whitesmoke;
+    text-align: center;
+    font-weight: bold;
+    font-size: 42px;
   }

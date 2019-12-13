@@ -36,11 +36,13 @@ foreach ($allRows as $row) {
     
     // echo "</div>";
     //echo "</form>";
+     $rowid = $row['id'] ;
+    echo "<div class = 'btn-flex'";
+    echo "<a href = 'updateTodo.php?update=$rowid'><button class = 'update_btn' name='update' value='" . $row['id'] . "'>Labot</button></a>";
     echo "<form action='deleteToDo.php' method='post'>";
-    echo "<button name='delete' value='" . $row['id'] . "'>Dzēst</button>";
+    echo "<button  class = 'update_btn' name='delete' value='" . $row['id'] . "'>Dzēst</button>";
     echo "</form>";
-    $rowid = $row['id'] ;
-    echo "<a href = 'updateTodo.php?update=$rowid'><button name='update' value='" . $row['id'] . "'>Labot</button></a>";
+    echo "</div>";
     echo "</div>";
 }
 echo "</div>";
