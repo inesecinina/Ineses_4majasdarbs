@@ -45,13 +45,16 @@ foreach ($allRows as $row) {
                 break;
         }
     }
-    echo "<button name='update' value='" . $row['id'] . "'>Labot</button>";
-    echo "</div>";
+    echo "<div class = 'btn-flex2'>";
+    echo "<button class = 'update_btn' name='update' value='" . $row['id'] . "'>Labot</button>";
     echo "</form>";
     echo "<form action='deleteToDo.php' method='post'>";
-    echo "<button name='delete' value='" . $row['id'] . "'>Dzēst</button>";
+    echo "<button class = 'update_btn' name='delete' value='" . $row['id'] . "'>Dzēst</button>";
     echo "</form>";
+    echo "<a href = '/'><button class = 'update_btn'>Atcelt</button></a>";
     echo "</div>";
+    echo "</div>";
+    
 }
 echo "</div>";
 echo "<hr>";

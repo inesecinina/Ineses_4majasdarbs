@@ -115,7 +115,7 @@ button:hover {
   .containeris-darbi {
     box-sizing: border-box;
     padding: 20px;
-    margin: 10px 10px 10px 10px;
+    margin: 20px;
     border-radius: 5px;
     background-color: #b4afa8;
     margin: 3% auto 3% auto; /* 5% from the top, 15% from the bottom and centered */
@@ -131,7 +131,6 @@ button:hover {
   .btn-flex {
     display: flex;
     flex-wrap: wrap;
-    flex-wrap: wrap;
     align-content: flex-end;
   }
 
@@ -145,4 +144,9 @@ button:hover {
     text-align: center;
     font-weight: bold;
     font-size: 42px;
+  }
+  .btn-flex2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
   }
