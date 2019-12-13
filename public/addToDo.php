@@ -11,7 +11,7 @@ require_once '../src/templates/head.php';
     <label for='description'><b>Kā jādara?</b></label>
     <textarea class="apraksts" name="description" placeholder="vieta aprakstam"></textarea>
     <label for='doing_date'><b>Kad jādara?</b></label>
-    <input type="date" name="doing_date" id="datepicker">
+    <input type="date" name="doing_date" id="datepicker" required>
     <button type="submit">Pievienot darbu</button>
 </form>
 <a href = "/"><button>Atcelt</button></a>

@@ -28,8 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->execute();
    } catch (PDOException $error) {
        echo "User alredy exists";
-    //    var_dump($error);
-       die("now");
+       die(" ");
    }
     //we go to our index.php or rather our root
     header('Location: /');
