@@ -105,3 +105,19 @@ button:hover {
     margin: 3% auto 3% auto; /* 5% from the top, 15% from the bottom and centered */
     border: none;
     width: 50%; 
+  }
+  .containeris-darbi {
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 10px 10px 10px 10px;
+    border-radius: 5px;
+    background-color: #b4afa8;
+    margin: 3% auto 3% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: none;
+    width: 200px; 
+  }
+
+  .flexis {
+    display: flex;
+    flex-wrap: wrap;
+  }

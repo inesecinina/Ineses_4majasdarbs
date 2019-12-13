@@ -13,32 +13,28 @@ $stmt->execute();
 $isFetchModeSet = $stmt->setFetchMode(PDO::FETCH_ASSOC);
 $allRows = $stmt->fetchAll();
 
-echo "<div class='todoes'>";
+echo "<div class='flexis'>";
 $columnsPrinted = false; //for column names
 foreach ($allRows as $row) {
     
     // echo "<form action='updateToDoProcess.php' method='post'>";
-    echo "<div class='update-todo'>";
+    echo "<div class='containeris-darbi'>";
 
     foreach ($row as $key => $value) {
-
         switch ($key) {
             case 'event':
             case 'description':
-                echo "<div>";
-                echo "<span>" . $row["$key"] . "</span>";
-                echo "</div>";
-                break; 
             case 'doing_date':
-                echo "<input class='input-value-cell value-$key' type='date' name='$key' value='$value'></input>";
-            break; 
+               echo "<div>";
+                echo "<span>" . $row["$key"] . "</span>";
+                echo "</div>"; 
             default:
                 // echo "<span class='value-cell'>$value </span>";
                 break;
         }
     }
     
-    echo "</div>";
+    // echo "</div>";
     //echo "</form>";
     echo "<form action='deleteToDo.php' method='post'>";
     echo "<button name='delete' value='" . $row['id'] . "'>Dzēst</button>";
