@@ -1,9 +1,11 @@
 body {
 font-family: Arial, Helvetica, sans-serif;
 color: whitesmoke;
+background-color: #b4afa8 ;
 }
 body::before {
     background-image: url("../img/backgrounds.png");
+    background-color: #b4afa8 ;
     background-size: cover;
     content: "";
     display: block;
@@ -102,4 +104,4 @@ button:hover {
     background-color: #b4afa8;
     margin: 3% auto 3% auto; /* 5% from the top, 15% from the bottom and centered */
     border: none;
-    width: 30%; 
+    width: 50%; 

@@ -20,12 +20,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     //TODO add real users
 
     // prepare and bind
-    $stmt = $conn->prepare("INSERT INTO users (username, hash)
+   try { $stmt = $conn->prepare("INSERT INTO users (username, hash)
                             VALUES (:username, :hash)");
     $stmt->bindParam(':username', $username);
     $stmt->bindParam(':hash', $hash);
 
     $stmt->execute();
+   } catch (PDOException $error) {
+       echo "User alredy exists";
+    //    var_dump($error);
+       die("now");
+   }
     //we go to our index.php or rather our root
     header('Location: /');
 } else {

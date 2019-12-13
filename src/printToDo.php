@@ -17,7 +17,7 @@ echo "<div class='todoes'>";
 $columnsPrinted = false; //for column names
 foreach ($allRows as $row) {
     
-    echo "<form action='updateToDoProcess.php' method='post'>";
+    // echo "<form action='updateToDoProcess.php' method='post'>";
     echo "<div class='update-todo'>";
 
     foreach ($row as $key => $value) {
@@ -25,7 +25,9 @@ foreach ($allRows as $row) {
         switch ($key) {
             case 'event':
             case 'description':
-               echo "<input class='input-value-cell value-$key' name='$key' value='$value'></input>";
+                echo "<div>";
+                echo "<span>" . $row["$key"] . "</span>";
+                echo "</div>";
                 break; 
             case 'doing_date':
                 echo "<input class='input-value-cell value-$key' type='date' name='$key' value='$value'></input>";
@@ -35,12 +37,14 @@ foreach ($allRows as $row) {
                 break;
         }
     }
-    echo "<button name='update' value='" . $row['id'] . "'>Update</button>";
+    
     echo "</div>";
-    echo "</form>";
+    //echo "</form>";
     echo "<form action='deleteToDo.php' method='post'>";
-    echo "<button name='delete' value='" . $row['id'] . "'>Delete</button>";
+    echo "<button name='delete' value='" . $row['id'] . "'>Dzēst</button>";
     echo "</form>";
+    $rowid = $row['id'] ;
+    echo "<a href = 'updateTodo.php?update=$rowid'><button name='update' value='" . $row['id'] . "'>Labot</button></a>";
     echo "</div>";
 }
 echo "</div>";
