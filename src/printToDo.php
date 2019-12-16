@@ -25,9 +25,7 @@ foreach ($allRows as $row) {
             case 'event':
             case 'description':
             case 'doing_date':
-               echo "<div>";
-                echo "<span>" . $row["$key"] . "</span>";
-                echo "</div>"; 
+               echo "<div>" . $row["$key"] . "</div>"; 
             default:
                 // echo "<span class='value-cell'>$value </span>";
                 break;

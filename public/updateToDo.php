@@ -34,7 +34,7 @@ foreach ($allRows as $row) {
                 break; 
             case 'description':
                 echo "<label for='description'><b>Kā jādara?</b></label>";
-               echo "<textarea class='apraksts' value-$key' name='$key' value='$value'></textarea>";
+               echo "<textarea class='apraksts' value-$key' name='$key' value='$value'>$value</textarea>";
                 break; 
             case 'doing_date':
                 echo "<label for='doing_date'><b>Kad jādara?</b></label>";
